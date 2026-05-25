@@ -4,8 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { describe, it, expect } from 'vitest';
-import { detectDevcontainerFromRequests } from './parser-shared';
-import { createRequest, createSession } from './parser-shared';
+import { detectDevcontainerFromRequests, createRequest, createSession } from './parser-shared';
 import { SessionRequest } from './types';
 
 function makeReq(overrides: Partial<SessionRequest> = {}): SessionRequest {
