@@ -20,6 +20,8 @@ function isObj(v: unknown): v is Record<string, unknown> {
 
 export function harnessFromPath(logsDir: string): string {
   if (logsDir.includes('Code - Insiders')) return 'Local Agent (Insiders)';
+  if (logsDir.includes('.vscode-server-insiders')) return 'Local Agent (Server Insiders)';
+  if (logsDir.includes('.vscode-server')) return 'Local Agent (Server)';
   if (logsDir.includes('.copilot')) return 'GitHub Copilot CLI';
   return 'Local Agent';
 }
@@ -40,6 +42,15 @@ export function findVsCodeDirs(): string[] {
       vsPath = path.join(home, '.config', edition, 'User', 'workspaceStorage');
     }
     if (vsPath && fs.existsSync(vsPath) && !dirs.includes(vsPath)) dirs.push(vsPath);
+  }
+
+  // VS Code Server (remote/SSH/devcontainer) paths
+  if (process.platform !== 'win32' && home) {
+    const serverEditions = ['.vscode-server', '.vscode-server-insiders'];
+    for (const serverDir of serverEditions) {
+      const serverPath = path.join(home, serverDir, 'data', 'User', 'workspaceStorage');
+      if (fs.existsSync(serverPath) && !dirs.includes(serverPath)) dirs.push(serverPath);
+    }
   }
 
   // Copilot CLI paths

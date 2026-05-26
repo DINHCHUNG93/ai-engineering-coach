@@ -743,3 +743,20 @@ describe('parseSessionFile — skill detection', () => {
     });
   });
 });
+describe('harnessFromPath — VS Code Server', () => {
+  it('returns "Local Agent (Server)" for .vscode-server paths', () => {
+    expect(harnessFromPath('/home/alice/.vscode-server/data/User/workspaceStorage')).toBe('Local Agent (Server)');
+  });
+
+  it('returns "Local Agent (Server Insiders)" for .vscode-server-insiders paths', () => {
+    expect(harnessFromPath('/home/alice/.vscode-server-insiders/data/User/workspaceStorage')).toBe('Local Agent (Server Insiders)');
+  });
+
+  it('does not match .vscode-server-insiders as plain .vscode-server', () => {
+    // .vscode-server-insiders contains the string ".vscode-server" — ensure
+    // the more-specific check fires first.
+    const result = harnessFromPath('/home/alice/.vscode-server-insiders/data/User/workspaceStorage');
+    expect(result).toBe('Local Agent (Server Insiders)');
+    expect(result).not.toBe('Local Agent (Server)');
+  });
+});
