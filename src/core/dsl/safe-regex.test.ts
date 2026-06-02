@@ -378,6 +378,7 @@ describe('isLikelySafe', () => {
   it('rejects a class-overlapping alternation pattern through compileSafe', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
 
+    // codeql[js/redos] Test fixture: compileSafe rejects this via isLikelySafe() before any RegExp is built, so it is never executed.
     expect(compileSafe('^([a]|a)+$')).toBeNull();
 
     expect(warn).toHaveBeenCalledTimes(1);
