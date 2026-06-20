@@ -1,3 +1,39 @@
+
+
+Microsoft vừa tung ra công cụ không thể thiếu cho những ai muốn học AI Engineering một cách bài bản
+
+Rất nhiều người học AI hiện nay tập trung vào prompt, model hay framework mới nhất, nhưng lại không biết mình đang sử dụng AI hiệu quả hay không. AI Engineering Coach là dự án mã nguồn mở từ Microsoft được xây dựng để giải quyết chính bài toán này. Dự án hoạt động như một “huấn luyện viên AI Engineering”, giúp phân tích cách bạn làm việc với AI Coding Agents và đưa ra các đề xuất cải thiện cụ thể. (Trendshift⁠)
+
+Các tính năng nổi bật:
+
+* Phân tích cách sử dụng AI Coding Assistant.
+* Hỗ trợ Claude Code, Codex, OpenCode, Copilot và nhiều công cụ khác.
+* Dashboard trực quan về thói quen làm việc với AI.
+* Chấm điểm kỹ năng AI Engineering.
+* Phát hiện 45 anti-pattern phổ biến.
+* Đánh giá chất lượng prompt và context.
+* Theo dõi xu hướng sử dụng AI theo thời gian.
+* Phân tích mức độ phụ thuộc vào AI.
+* Tìm các prompt lặp lại để chuyển thành reusable skills.
+* Chạy hoàn toàn trên máy cá nhân, không gửi dữ liệu lên cloud.
+* Extension cho VS Code.
+
+Bạn sẽ học được:
+
+* Cách viết prompt hiệu quả hơn.
+* Cách quản lý context cho agent.
+* Cách review code do AI sinh ra.
+* Cách xây dựng workflow Agentic Engineering.
+* Cách biến các tác vụ lặp lại thành skill hoặc automation.
+* Cách đo lường năng suất khi làm việc cùng AI. (Building with AI & Azure⁠)
+
+Điểm thú vị nhất là AI Engineering Coach không dạy lý thuyết suông. Thay vào đó, nó phân tích trực tiếp các phiên làm việc thực tế của bạn với Claude Code, Copilot hay Codex rồi chỉ ra những điểm yếu cần cải thiện. Có thể xem đây như Strava cho AI Engineering hoặc Fitbit dành cho lập trình viên sử dụng AI. (Building with AI & Azure⁠)
+
+Nếu đang muốn chuyển từ việc “dùng AI” sang “làm AI Engineering” một cách chuyên nghiệp, đây là một trong những dự án đáng trải nghiệm nhất hiện nay.
+
+
+
+
 <h1 align="center">AI Engineer Coach</h1>
 
 <p align="center">
